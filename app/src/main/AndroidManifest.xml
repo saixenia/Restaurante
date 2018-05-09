@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Registro" />
-        <activity android:name=".Meseros"></activity>
+        <activity android:name=".Meseros" />
+        <activity android:name=".Cocineros"></activity>
     </application>
 
 </manifest>
