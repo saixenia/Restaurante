@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".Meseros">
 
@@ -12,14 +12,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mis Pedidos"
+            android:textColor="@android:color/black"
+            android:textSize="26sp" />
+
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="447dp" />
+            android:layout_height="404dp" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="61dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Registrar Pedido" />
     </LinearLayout>
 </LinearLayout>
