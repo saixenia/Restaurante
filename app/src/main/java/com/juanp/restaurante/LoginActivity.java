@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Txt_Registro.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Usu_Registro = new Intent(LoginActivity.this, Registro.Registro.class);
+                Intent Usu_Registro = new Intent(LoginActivity.this, Registro.class);
                 LoginActivity.this.startActivity(Usu_Registro);
             }
         });
