@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DB_Restaurante extends SQLiteOpenHelper {
+public class    DB_Restaurante extends SQLiteOpenHelper {
 
     public static final String TABLE_MESEROS = "usu_meseros";
     public static final String TABLE_COCINEROS = "usu_cocineros";
