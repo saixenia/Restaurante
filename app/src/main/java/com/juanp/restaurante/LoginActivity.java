@@ -40,6 +40,7 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
+    EditText Txt_Identificacion, ;
     TextView Txt_Registro;
 
     /**
