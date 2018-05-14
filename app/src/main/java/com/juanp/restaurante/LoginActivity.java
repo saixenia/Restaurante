@@ -79,6 +79,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        DB_Restaurante DB_Con = new DB_Restaurante(this, "Restaurante", null, 1);
+
+
         // Set up the login form.
         mEmailView = findViewById(R.id.email);
         populateAutoComplete();

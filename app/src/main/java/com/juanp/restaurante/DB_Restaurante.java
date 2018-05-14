@@ -13,9 +13,8 @@ public class DB_Restaurante extends SQLiteOpenHelper {
     public static final String TABLE_PEDIDOS_PRODUCTOS = "pedidos_productos";
     public static final String TABLE_PRODUCTOS = "productos";
 
-
     public DB_Restaurante(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, "Restaurante.db", factory, 1);
+        super(context, name, factory, version);
     }
 
     @Override
@@ -38,7 +37,9 @@ public class DB_Restaurante extends SQLiteOpenHelper {
         DB_R.execSQL("CREATE TABLE pedidos" +
                 "(id_pedido integer PRIMARY KEY AUTOINCREMENT," +
                 "id_usu_mesero varchar(50)," +
-                "pedi_fecha date," +
+                "id_usu_cocinero varchar(50)," +
+                "pedi_fecha_inicio datetime DEFAULT CURRENT_TIMESTAMP NOT NULL," +
+                "pedi_fecha_final datetime DEFAULT CURRENT_TIMESTAMP NOT NULL," +
                 "pedi_estado varchar(20)"+")");
 
         DB_R.execSQL("CREATE TABLE pedidos_productos" +
