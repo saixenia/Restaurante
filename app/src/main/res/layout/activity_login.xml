@@ -13,7 +13,7 @@
 
     <!-- Login progress -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Txt_Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content">
 
                     <AutoCompleteTextView
-                        android:id="@+id/email"
+                        android:id="@+id/Txt_Identificacion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="No. Identificacion"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/password"
+                        android:id="@+id/Txt_Contrasena"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Contraseña"
@@ -81,7 +81,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
-                    android:id="@+id/email_sign_in_button"
+                    android:id="@+id/Btn_Iniciar_Sesion"
                     style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -7,7 +7,7 @@
     tools:context=".Registro$Registro">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/No_Identificacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -16,7 +16,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/Txt_Identificacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -24,7 +24,7 @@
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -33,7 +33,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/Txt_Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -41,7 +41,7 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -50,7 +50,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/Txt_Apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -58,7 +58,7 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -67,7 +67,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/Txt_Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -75,7 +75,7 @@
         android:inputType="textEmailAddress" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/Contrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -84,7 +84,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/Txt_Contrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -92,12 +92,13 @@
         android:inputType="textPassword" />
 
     <RadioGroup
+        android:id="@+id/Rd_Btn_Mesero_Cocinero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/Rbtn_Mesero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -105,7 +106,7 @@
             android:text="Mesero" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/Rbtn_Cocinero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -114,7 +115,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Btn_Registro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
