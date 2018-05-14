@@ -19,49 +19,57 @@
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Entrada"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="55dp" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Plato Fuerte"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="55dp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Postre"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/spinner3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="55dp" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Bebida"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/spinner4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="55dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Guardar" />
 </LinearLayout>
