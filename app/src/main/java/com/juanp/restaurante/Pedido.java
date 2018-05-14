@@ -9,5 +9,6 @@ public class Pedido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedido);
+        setTitle("Pedido");
     }
 }
