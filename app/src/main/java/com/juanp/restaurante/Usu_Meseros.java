@@ -52,4 +52,7 @@ public class Usu_Meseros {
         this.mese_email = mese_email;
         this.mese_contra = mese_contra;
     }
+
+    public Usu_Meseros() {
+    }
 }

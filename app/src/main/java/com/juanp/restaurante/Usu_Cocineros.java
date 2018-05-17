@@ -52,4 +52,7 @@ public class Usu_Cocineros {
         this.coci_email = coci_email;
         this.coci_contra = coci_contra;
     }
+
+    public Usu_Cocineros() {
+    }
 }

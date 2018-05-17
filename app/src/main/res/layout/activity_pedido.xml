@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Pedido">
+    tools:context="com.juanp.restaurante.Pedido">
 
     <TextView
         android:id="@+id/textView8"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Registro$Registro">
+    tools:context="com.juanp.restaurante.Registro">
 
     <TextView
         android:id="@+id/No_Identificacion"
