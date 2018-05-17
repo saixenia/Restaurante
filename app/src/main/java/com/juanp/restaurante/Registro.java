@@ -73,7 +73,7 @@ public class Registro extends AppCompatActivity {
             DB_Restaurante Admin = new DB_Restaurante(this, "Restaurante", null, 1);
             SQLiteDatabase DB_Restaurante = Admin.getWritableDatabase();
 
-            String Coci_Identificacion = Txt_Identificacion.getText().toString();
+            int Coci_Identificacion = Integer.parseInt(String.valueOf(Txt_Identificacion.getText()));
             String Coci_Nombre = Txt_Nombre.getText().toString();
             String Coci_Apellido = Txt_Apellido.getText().toString();
             String Coci_Email = Txt_Email.getText().toString();

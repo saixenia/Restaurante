@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,8 +20,10 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -41,7 +44,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
     EditText Txt_Identificacion, Txt_Contrasena;
-    public Cursor Fila;
+    public Cursor Mesero, Cocinero;
     TextView Txt_Registro;
 
     /**
@@ -72,6 +75,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Txt_Identificacion = findViewById(R.id.Txt_Identificacion);
+        Txt_Contrasena = findViewById(R.id.Txt_Identificacion);
+
         Txt_Registro = findViewById(R.id.Txt_Registro);
         Txt_Registro.setOnClickListener(new OnClickListener() {
             @Override
@@ -80,8 +86,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 LoginActivity.this.startActivity(Usu_Registro);
             }
         });
-
-        DB_Restaurante DB_Con = new DB_Restaurante(this, "Restaurante", null, 1);
 
 
         // Set up the login form.
@@ -110,6 +114,40 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    public void Inicio_Sesion (View view) {
+        DB_Restaurante Admin = new DB_Restaurante(this, "Restaurante", null, 1);
+        SQLiteDatabase DB_Restaurante = Admin.getWritableDatabase();
+
+        int Identificacion = Integer.parseInt(String.valueOf(Txt_Identificacion.getText()));
+        String Str_Identificacion = String.valueOf(Identificacion);
+        String Contrasena = Txt_Contrasena.getText().toString();
+
+        Mesero = DB_Restaurante.rawQuery("SELECT id_usu_mesero,mese_contra FROM usu_meseros WHERE id_usu_mesero='"+Identificacion+"' AND mese_contra='"+Contrasena+"'", null);
+        Cocinero = DB_Restaurante.rawQuery("SELECT id_usu_cocinero,coci_contra FROM usu_cocineros WHERE id_usu_cocinero='"+Identificacion+"' AND coci_contra='"+Contrasena+"'", null);
+
+        if (Mesero.moveToFirst()){
+            String Identi = String.valueOf(Mesero.getString(0));
+            String Contra = Mesero.getString(1);
+            if (Str_Identificacion.equals(Identi) && Contrasena.equals(Contra)){
+                Intent Mesero = new Intent(LoginActivity.this,Meseros.class);
+                startActivity(Mesero);
+                Txt_Identificacion.setText("");
+                Txt_Contrasena.setText("");
+            }
+        }
+
+        if (Cocinero.moveToFirst()){
+            String Identi = String.valueOf(Cocinero.getString(0));
+            String Contra = Cocinero.getString(1);
+            if (Str_Identificacion.equals(Identi) && Contrasena.equals(Contra)){
+                Intent Cocinero = new Intent(LoginActivity.this,Cocineros.class);
+                startActivity(Cocinero);
+                Txt_Identificacion.setText("");
+                Txt_Contrasena.setText("");
+            }
+        }
     }
 
     private void populateAutoComplete() {
