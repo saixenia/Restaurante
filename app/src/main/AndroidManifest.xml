@@ -23,9 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registro$Registro" />
-        <activity android:name=".Meseros$Meseros" />
-        <activity android:name=".Cocineros$Cocineros"></activity>
+        <activity android:name=".Registro" />
+        <activity android:name=".Meseros" />
+        <activity android:name=".Cocineros"></activity>
+        <activity android:name=".Pedido"></activity>
     </application>
 
 </manifest>
