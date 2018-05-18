@@ -1,33 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context="com.juanp.restaurante.Meseros">
+    android:layout_height="match_parent"
+    android:padding="5dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mis Pedidos"
-            android:textColor="@android:color/black"
-            android:textSize="26sp" />
+            android:orientation="vertical">
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="404dp" />
+            <TextView
+                android:id="@+id/titleOrden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ORDENES PENDIENTES"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="Registrar Pedido" />
-    </LinearLayout>
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MESA"
+                    android:textSize="20sp"
+                    android:drawableLeft="@drawable/mesa_24px"/>
+                <Spinner
+                    android:id="@+id/nMesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/entrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/food_24px"
+                android:ems="10"
+                android:hint="Entrada"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/food_24px"
+                android:ems="10"
+                android:hint="Plato Fuerte"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/postre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/food_24px"
+                android:ems="10"
+                android:hint="Postre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/bebida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/food_24px"
+                android:hint="Bebida"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:id="@+id/linEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="estado"
+                    android:textSize="20sp"
+                    android:drawableLeft="@drawable/status_24px"/>
+                <TextView
+                    android:id="@+id/estadoCocina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="espera"
+                    android:drawableRight="@drawable/espera_24px"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linCheff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cocinero"
+                    android:textSize="20sp"
+                    android:drawableLeft="@drawable/chef_24px"/>
+                <TextView
+                    android:id="@+id/cheff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="no_asignado"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/errorAddOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linBtns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancelar"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorAccent"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"/>
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="editar"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
