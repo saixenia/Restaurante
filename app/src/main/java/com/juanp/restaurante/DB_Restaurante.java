@@ -35,7 +35,7 @@ public class DB_Restaurante extends SQLiteOpenHelper {
                 "coci_contra varchar(50)"+")");
 
         DB_R.execSQL("CREATE TABLE pedidos" +
-                "(id_pedido integer PRIMARY KEY AUTOINCREMENT," +
+                "(id_mesa integer PRIMARY KEY AUTOINCREMENT," +
                 "id_usu_mesero varchar(50)," +
                 "id_usu_cocinero varchar(50)," +
                 "pedi_fecha_inicio datetime DEFAULT CURRENT_TIMESTAMP NOT NULL," +
