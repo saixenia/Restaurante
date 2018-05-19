@@ -38,8 +38,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MESA"
-                    android:textSize="20sp"
-                    android:drawableLeft="@drawable/mesa_24px"/>
+                    android:textSize="20sp"/>
+                    <!--android:drawableLeft="@drawable/mesa_24px"-->
                 <Spinner
                     android:id="@+id/nMesa"
                     android:layout_width="wrap_content"
@@ -52,39 +52,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/food_24px"
                 android:ems="10"
                 android:hint="Entrada"
                 android:inputType="text" />
+            <!--android:drawableLeft="@drawable/food_24px"-->
 
             <EditText
                 android:id="@+id/principal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/food_24px"
                 android:ems="10"
                 android:hint="Plato Fuerte"
                 android:inputType="text" />
+            <!-- android:drawableLeft="@drawable/food_24px"-->
 
             <EditText
                 android:id="@+id/postre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/food_24px"
                 android:ems="10"
                 android:hint="Postre"
                 android:inputType="text" />
+            <!--android:drawableLeft="@drawable/food_24px"-->
 
             <EditText
                 android:id="@+id/bebida"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/food_24px"
                 android:hint="Bebida"
                 android:inputType="text" />
+            <!--android:drawableLeft="@drawable/food_24px"-->
 
             <LinearLayout
                 android:id="@+id/linEstado"
@@ -98,8 +98,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="estado"
-                    android:textSize="20sp"
-                    android:drawableLeft="@drawable/status_24px"/>
+                    android:textSize="20sp"/>
+                    <!--android:drawableLeft="@drawable/status_24px"/>-->
                 <TextView
                     android:id="@+id/estadoCocina"
                     android:layout_width="wrap_content"
@@ -107,8 +107,8 @@
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:text="espera"
-                    android:drawableRight="@drawable/espera_24px"
                     android:layout_marginLeft="20dp"/>
+                <!--android:drawableRight="@drawable/espera_24px"-->
             </LinearLayout>
 
             <LinearLayout
@@ -123,8 +123,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cocinero"
-                    android:textSize="20sp"
-                    android:drawableLeft="@drawable/chef_24px"/>
+                    android:textSize="20sp"/>
+                    <!--android:drawableLeft="@drawable/chef_24px"-->
                 <TextView
                     android:id="@+id/cheff"
                     android:layout_width="wrap_content"
