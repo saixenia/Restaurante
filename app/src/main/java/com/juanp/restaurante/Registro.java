@@ -49,7 +49,7 @@ public class Registro extends AppCompatActivity {
             DB_Restaurante Admin = new DB_Restaurante(this, "Restaurante", null, 1);
             SQLiteDatabase DB_Restaurante = Admin.getWritableDatabase();
 
-            String Mese_Identificacion = Txt_Identificacion.getText().toString();
+            int Mese_Identificacion = Integer.parseInt(String.valueOf(Txt_Identificacion.getText()));
             String Mese_Nombre = Txt_Nombre.getText().toString();
             String Mese_Apellido = Txt_Apellido.getText().toString();
             String Mese_Email = Txt_Email.getText().toString();
